@@ -6,12 +6,25 @@ using System.Threading.Tasks;
 
 namespace Exam_s00226438
 {
-    internal class Movie
+    public class Movie : IComparable
     {
-        int MovieID;
-        string Title;
-        string Imagename;
-        string Description;
-        string Cast;
+        public int MovieID { get; set; }
+        public string Title { get; set; }
+
+        public string ImageName { get; set; }
+        public string Description { get; set; }
+        public string Cast { get; set; }
+        public Movie(string title)
+        {
+            Title = title;
+        }
+
+        public Movie() : this("unknown") { }
+        public int CompareTo(object obj)
+        {
+            Movie other = obj as Movie;
+            return this.Title.CompareTo(other.Title);
+        }
+
     }
 }

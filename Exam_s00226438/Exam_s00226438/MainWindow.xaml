@@ -5,12 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Exam_s00226438"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid>
         <Label x:Name="lblMovieListing" Content="Movie Listings" HorizontalAlignment="Left" Margin="45,30,0,0" VerticalAlignment="Top" FontSize="30"/>
-        <ListBox x:Name="lbxMovieList" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="50,85,400,109" Width="350" Height="250"/>
+        <ListBox x:Name="lbxMovieList" d:ItemsSource="{d:SampleData ItemCount=3}" Margin="50,85,408,112" SelectionChanged="lbxMovieList_SelectionChanged"/>
         <Label Content="Movie Synopsis" HorizontalAlignment="Left" Margin="454,30,0,0" VerticalAlignment="Top" FontSize="30"/>
-        <TextBlock HorizontalAlignment="Left" Margin="462,85,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="250" Width="302"/>
+        <TextBlock x:Name="Descriptiontbl" HorizontalAlignment="Left" Margin="462,85,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="250" Width="302"/>
+        <TextBox HorizontalAlignment="Left" Margin="50,350,0,0" TextWrapping="Wrap" Text="Quick Book&#xD;&#xA;&#xD;&#xA;Select Movie From List Above,&#xD;&#xA;choose date and tickets required" VerticalAlignment="Top" Width="210" RenderTransformOrigin="0.405,0.377" Height="74"/>
+        <DatePicker x:Name="DatePicker" HorizontalAlignment="Left" Margin="290,375,0,0" VerticalAlignment="Top"/>
+        <Label Content="Available Seats
+               " HorizontalAlignment="Left" Margin="416,350,0,0" VerticalAlignment="Top" Width="96"/>
+        <TextBlock x:Name="NumberOfSeats" HorizontalAlignment="Left" Margin="426,386,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <Label Content="Required Seats" HorizontalAlignment="Left" Margin="542,350,0,0" VerticalAlignment="Top" Width="95"/>
+        <TextBlock x:Name="SeatsRequiredNumber" HorizontalAlignment="Left" Margin="552,387,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <Button Content="Book Seats" HorizontalAlignment="Left" Margin="695,386,0,0" VerticalAlignment="Top" Height="25" Width="80"/>
 
     </Grid>
 </Window>
