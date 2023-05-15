@@ -7,6 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Label x:Name="lblMovieListing" Content="Movie Listings" HorizontalAlignment="Left" Margin="45,30,0,0" VerticalAlignment="Top" FontSize="30"/>
+        <ListBox x:Name="lbxMovieList" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="50,85,400,109" Width="350" Height="250"/>
+        <Label Content="Movie Synopsis" HorizontalAlignment="Left" Margin="454,30,0,0" VerticalAlignment="Top" FontSize="30"/>
+        <TextBlock HorizontalAlignment="Left" Margin="462,85,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="250" Width="302"/>
+
     </Grid>
 </Window>
